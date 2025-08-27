@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://b-hyoung.github.io/When-I-come-to-Uiseong",
   "dependencies": {
     "@metamask/safe-event-emitter": "^3.1.2",
     "@testing-library/dom": "^10.4.1",
@@ -34,7 +35,10 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build",
+    "postbuild": "cp build/index.html build/404.html"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +62,7 @@
     "ajv": "^8.17.1",
     "ajv-keywords": "^5.1.0",
     "customize-cra": "^1.0.0",
+    "gh-pages": "^6.3.0",
     "react-app-rewired": "^2.2.1",
     "source-map-loader": "^5.0.0",
     "typescript": "^5.9.2"
