@@ -6,4 +6,4 @@ Docs : [Docs 파일 보러가기](https://docs.google.com/document/d/1kTuHlKpWS8
 
 PPT : [PPT로 이동하기](https://docs.google.com/presentation/d/1otUCv3fkQqHHIzPD3u4HmQFCyfNN2Q_kGAKhXva1r9k/edit?usp=sharing)
 
-웹페이지 작업본 : [의성에오면?](https://uiseong.netlify.app/)
+Link : [의성에오면?](https://uiseong.netlify.app/)
