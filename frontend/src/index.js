@@ -6,11 +6,20 @@ import { BrowserRouter } from 'react-router-dom'; // react-router-dom에서 impo
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+async function prepare() {
+  if (process.env.NODE_ENV === 'development') {
+    const { worker } = await import('./mocks/browser');
+    await worker.start({ onUnhandledRequest: 'bypass' });
+    console.log('[MSW] Worker started');
+  }
+}
 
+prepare().then(() => {
   root.render(
     <React.StrictMode>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </React.StrictMode>
   );
+});
